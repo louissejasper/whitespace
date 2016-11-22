@@ -1,0 +1,13 @@
+( function( $ ) {
+	$( document ).ready( function() {
+
+	} );
+
+	$( window ).resize( function() {
+	    
+	} );
+
+	$( window ).load( function() {
+	    
+	} );
+} ( jQuery ) );
