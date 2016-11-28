@@ -14,7 +14,7 @@
 		* because of internal style can cause of an error in W3 Validator
 		**
 		**/
-		view('resize-window'); 
+		//view('resize-window'); 
 
 		wp_footer(); ?>
 	</body>
