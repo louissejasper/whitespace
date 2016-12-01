@@ -28,7 +28,6 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
 		wp_enqueue_style('header', THEME_URL .'/assets/css/header.css');
 		wp_enqueue_style('footer', THEME_URL .'/assets/css/footer.css');
 		wp_enqueue_style('tinymce', THEME_URL .'/assets/css/tinymce.css');
-		wp_enqueue_style('resonsive', THEME_URL .'/assets/css/responsive.css');
 
 		/* For Develoer's Custom Style */
 		wp_enqueue_style('custom1', THEME_URL .'/assets/css/custom1.css');
