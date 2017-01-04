@@ -40,10 +40,10 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
 		 */
 		
 		/* Third Party Script */
-		wp_register_script( 'bootstrap_js', THEME_URL  .'/vendor/bootstrap/js/bootstrap.min.js', array('jQuery'), NULL, true );
+		wp_register_script( 'bootstrap_js', THEME_URL  .'/vendor/bootstrap/js/bootstrap.min.js', array('jquery'), NULL, true );
 		wp_enqueue_script( 'bootstrap_js' );
 
-		wp_register_script( 'smoothscroll', THEME_URL .'/vendor/smoothscroll/smoothscroll.js', array('jQuery'), NULL, true );
+		wp_register_script( 'smoothscroll', THEME_URL .'/vendor/smoothscroll/smoothscroll.js', array('jquery'), NULL, true );
 		wp_enqueue_script( 'smoothscroll' );
 
 		/* Customize Script */
@@ -78,7 +78,7 @@ if ( ! function_exists( 'enqueue_admin_style_script' ) ) {
 		/* 
 		 * Register/Hook Scripts for backend
 		 */
-		wp_register_script( 'backend', THEME_URL .'/assets/js/backend.js', array('jQuery'), NULL, true );
+		wp_register_script( 'backend', THEME_URL .'/assets/js/backend.js', array('jquery'), NULL, true );
 		wp_enqueue_script( 'backend' );
 	}
 
