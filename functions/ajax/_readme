@@ -1,7 +1,12 @@
+***** Use this as a guide *****
+
+*Note*
+Use one js and php for one ajax process to debug easily
+
 add_action( 'wp_ajax_nopriv_[action_name]', 'function_name' );
 add_action( 'wp_ajax_[action_name]', 'function_name' );
 
-function function_name() 
+function [function_name]() 
 {
 	if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 		/* Statement */

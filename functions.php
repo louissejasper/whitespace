@@ -25,7 +25,12 @@ include_all_php('shortcode');
 include_all_php('widget');
 
 /* For the developer's custom functions */
+
+/* --> More than one developer? Use this */
 include_once( 'functions/custom1.php' );
 include_once( 'functions/custom2.php' );
 include_once( 'functions/custom3.php' );
 include_once( 'functions/custom4.php' );
+
+/* --> Else, use this */
+include_once( 'functions/main.php' );

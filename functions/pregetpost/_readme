@@ -1,0 +1,9 @@
+***** Use this as a guide *****
+
+function [function_name]( $query ) 
+{
+	/* Statement */
+
+	return $query;
+};
+add_action( 'pre_get_posts', '[function_name]' ); 

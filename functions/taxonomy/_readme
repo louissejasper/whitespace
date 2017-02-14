@@ -1,0 +1,27 @@
+***** Use this as a guide *****
+
+$labels = array(
+    'name'                  => _x( '[Name of Categories]', 'taxonomy general name' ),
+    'singular_name'         => _x( 'Category', 'taxonomy singular name' ),
+    'add_new_item'          => __( 'Add New Category' ),
+    'new_item_name'         => __( 'New Category' ),
+    'edit_item'             => __( 'Edit Category' ),
+    'update_item'           => __( 'Update Category' ),
+    'all_items'             => __( 'All Categories' ),
+    'search_items'          => __( 'Search Categories' ),
+    'parent_item'           => __( 'Parent Category' ),
+    'parent_item_colon'     => __( 'Parent Categories:' ),
+    'menu_name'             => __( '[Name of Categories]' ),
+);
+
+register_taxonomy( '[taxonomy-slug-at-backend]',
+    array( '[post-type]' ),
+    array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => '[taxonomy-slug-at-frontend]' ),
+    )
+);

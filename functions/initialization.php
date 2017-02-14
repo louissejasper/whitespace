@@ -22,4 +22,3 @@ if ( ! function_exists( 'include_all_php' ) ) {
 }
 
 define( 'THEME_URL' , get_template_directory_uri() );
-define( 'THEME_URL' , get_template_directory() 	);

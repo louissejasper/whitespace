@@ -34,6 +34,7 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
 		wp_enqueue_style('custom2', THEME_URL .'/assets/css/custom2.css');
 		wp_enqueue_style('custom3', THEME_URL .'/assets/css/custom3.css');
 		wp_enqueue_style('custom4', THEME_URL .'/assets/css/custom4.css');
+		wp_enqueue_style('main', THEME_URL .'/assets/css/main.css');
 		
 		/* 
 		 * Register/Hook Scripts
@@ -59,9 +60,15 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
 		wp_register_script( 'custom4', THEME_URL . '/assets/js/custom4.js', array( 'jquery' ), NULL, true );
 	    wp_enqueue_script( 'custom4' );
 
+	    wp_register_script( 'main', THEME_URL . '/assets/js/main.js', array( 'jquery' ), NULL, true );
+	    wp_enqueue_script( 'main' );
+
+	    wp_register_script( 'resize', THEME_URL . '/assets/js/resize.js', array( 'jquery' ), NULL, true );
+	    wp_enqueue_script( 'resize' );
+
 		/* AJAX */
 		// wp_register_script( '[filename]', THEME_URL .'/assets/js/ajax/[filename].js',array('jquery'),NULL,true);
-		// wp_enqueue_script( 'custom4' );
+		// wp_enqueue_script( '[filename] );
 	}
 	add_action('wp_enqueue_scripts','enqueue_style_script');
 }

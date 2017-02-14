@@ -1,0 +1,14 @@
+If you use this theme as a group.
+Comment the file main.css in functions/enqueue.php, 
+else comment the custom1.css to custom4.css.
+
+backend.css // Style of your backend
+header.css // Style of your header part in frontend
+footer.css // Style of your footer part in frontend
+main.css // Style of your frontend - Individual
+custom1.css // Style of your frontend - Group - Member1
+custom2.css // Style of your frontend - Group - Member2
+custom3.css // Style of your frontend - Group - Member3
+custom4.css // Style of your frontend - Group - Member4
+responsive.css // Style of your frontend in mobile/tablet screen
+tinymce.css // Style in tinymce when you edit the content - this work if your have a Advnaced Tinymce Plugins https://wordpress.org/plugins/tinymce-advanced/

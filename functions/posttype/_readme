@@ -1,0 +1,35 @@
+***** Use this as a guide *****
+
+$labels = array(
+	'name' 				 => _x( '[Name of Posttype]', 'post type general name' ),
+	'singular_name' 	 => _x( '[Name of Posttype]', 'post type singular name' ),
+	'add_new' 			 => _x( 'Add New', '[Name of Posttype]' ),
+	'add_new_item' 		 => __( 'Add New [Name of Posttype]' ),
+	'edit_item' 		 => __( 'Edit Product' ),
+	'new_item' 			 => __( 'New [Name of Posttype]' ),
+	'all_items' 		 => __( 'All [Name of Posttype]' ),
+	'view_item' 		 => __( 'View Product' ),
+	'search_items' 		 => __( 'Search [Name of Posttype]' ),
+	'not_found' 		 => __( 'No [Name of Posttype] Found' ),
+	'not_found_in_trash' => __( 'No [Name of Posttype] Found in Trash' ), 
+	'parent_item_colon'	 => '',
+	'menu_name' 		 => __( '[Name of Posttype]' )
+);
+
+$args = array(
+	'labels' 			 => $labels,
+	'public' 			 => true,
+	'publicly_queryable' => true,
+	'show_ui' 			 => true, 
+	'show_in_menu' 		 => true, 
+	'query_var' 		 => true,
+	'rewrite' 			 => true,
+	'capability_type' 	 => 'post',
+	'has_archive' 		 => true, 
+	'hierarchical' 		 => false,
+	'menu_position' 	 => 5,
+	'supports' 			 => array( 'title', 'editor', 'thumbnail', 'author','excerpt' ),
+	'menu_icon'   		 => '[Visit this link for icon https://developer.wordpress.org/resource/dashicons/#wordpress]',
+); 
+
+register_post_type( '[posttype-slug]', $args );
