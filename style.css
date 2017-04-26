@@ -19,11 +19,9 @@ Text Domain: Starter Template
 * Make this as your reference.
 * Path : assets/css
 *
-* theme_admin.css ( Wordpress Backend Design )
-* theme_tinymce.css ( Style for your tinymce plugin only. )
-* theme_global.css ( Global Style )
-* theme_header.css ( Style for your header section )
-* theme_footer.css ( Style for your footer section )
-* theme_specific.css ( Specific style for every page of your website )
-* theme_reponsive.css ( Responsive Style )
+* backend.css ( Wordpress Backend Design )
+* tinymce.css ( Style for your tinymce plugin only. )
+* header.css ( Style for your header section )
+* footer.css ( Style for your footer section )
+* custom-*.css ( Developer's Custom Style )
 */

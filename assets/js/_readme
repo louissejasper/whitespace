@@ -3,9 +3,4 @@ Comment the file main.js in functions/enqueue.php,
 else comment the custom1.js to custom4.js.
 
 backend.js // JavaScript of your backend
-main.js // JavaScript of your frontend - Individual
-custom1.js // JavaScript of your frontend - Group - Member1
-custom2.js // JavaScript of your frontend - Group - Member2
-custom3.js // JavaScript of your frontend - Group - Member3
-custom4.js // JavaScript of your frontend - Group - Member4
-resize.js // JavaScript of your frontend on resize events
+custom-*.js // Developer's Custom JavaScript

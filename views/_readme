@@ -1,13 +1,14 @@
 ***** How to use this? *****
 
-Place your partial content in this folder and use the function...
+Place your whole content in this folder and use the function...
 
 $args = [
-	'var1' => 'val1'
+	'key1' => 'val1'
 ];
-view( '[name-of-the-file]', $args )
+view( 'partial-[name-of-the-file]', $args )
+view( 'content-[name-of-the-file]', $args )
 
-Inside of [name-of-the-file].php you can use the key of an 
+Inside of partial-[name-of-the-file].php or content-[name-of-the-file].php you can use the key of an 
 array as a varibale.
 
-echo $var1; // output val1
+echo $key1; // output val1

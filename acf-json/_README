@@ -1,0 +1,9 @@
+When you create an ACF Field Group, the ACF automatically generate a JSON file in this folder.
+
+the JSON files in this folder only hold a single field group and this method will only work with field groups that ACF automatically saves in this folder. It does not work with field groups exported with the export tool.
+
+If you want to import field groups from another site, create an acf-json folder on the other site, save/update the field groups so the are save in the folder and then copy the field groups to the folder on the other site.
+
+If this is what you’ve already done. You won’t see these field groups in the ACF field group editor, but the will be active on the site. If you want to see the groups in the admin of the new site then you need to use the import tool to import them.
+
+https://support.advancedcustomfields.com/forums/topic/import-json-with-acf-json-folder/

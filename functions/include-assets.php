@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) )
 	exit;
 	
 /**
+ * Include assets before get_footer()
  * Enqueue Style/Script for specific page
  * @param  array $filenames collection filename of style/script
  * @return enqueue your style/script

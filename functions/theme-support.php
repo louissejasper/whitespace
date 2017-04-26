@@ -36,10 +36,10 @@ add_theme_support( 'custom-header', apply_filters( 'custom_header_args', array(
  * Custom Background
  */
 $defaults = array(
-'default-color'          => '',
-'default-image'          => '',
-'wp-head-callback'       => '_custom_background_cb',
-'admin-head-callback'    => '',
-'admin-preview-callback' => ''
+	'default-color'          => '',
+	'default-image'          => '',
+	'wp-head-callback'       => '_custom_background_cb',
+	'admin-head-callback'    => '',
+	'admin-preview-callback' => ''
 );
 add_theme_support( 'custom-background', $defaults );
