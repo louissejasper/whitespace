@@ -7,14 +7,7 @@
  *
  * to use the view
  *
- * view('partial-[file-name]', array(
- *    'some_variable' => 'value',
- *    'some_variable_2' => 'value 2',
- * ));
- *
- * or
- * 
- * view('content-[file-name]', array(
+ * view('[file-name]', array(
  *    'some_variable' => 'value',
  *    'some_variable_2' => 'value 2',
  * ));
@@ -36,23 +29,20 @@ if ( ! function_exists( 'include_partial' ) )
 		// Cache
 		static $views = array();
 
-		if ( preg_match( '/partial-/', $template ) || preg_match( '/content-/', $template ) ) 
+		$path = get_template_directory() . '/views/' . str_replace('.', DIRECTORY_SEPARATOR, $template) . '.php';
+		if (in_array($path, $views)) 
 		{
-			$path = get_template_directory() . '/views/' . str_replace('.', DIRECTORY_SEPARATOR, $template) . '.php';
-			if (in_array($path, $views)) 
+			extract($vars);
+			include $path;
+		}
+		else 
+		{
+			if (file_exists($path)) 
 			{
+				$views[] = $path;
 				extract($vars);
 				include $path;
-			}
-			else 
-			{
-				if (file_exists($path)) 
-				{
-					$views[] = $path;
-					extract($vars);
-					include $path;
-				}	
-			}
+			}	
 		}
 	}
 }

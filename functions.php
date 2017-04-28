@@ -9,10 +9,10 @@ include_once( 'functions/theme-support.php' );
 include_once( 'functions/menus.php' );
 include_once( 'functions/body-class.php' );
 include_once( 'functions/wp-title.php' );
+// include_once( 'functions/tinymce.php' );
 // include_once( 'functions/backend.php' );
 // include_once( 'functions/page-cat.php' );
 // include_once( 'functions/term-settings.php' );
-// include_once( 'functions/tinymce.php' );
 
 /* Include all the file inside the specify subfolder of functions folder */
 include_all_php('posttype');

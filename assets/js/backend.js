@@ -1,19 +1,34 @@
-( function( $ ) {
-	/**
-	 * Script On Document Ready
-	 */
+jQuery.noConflict();
+var $ = jQuery;
 
+/**
+ * Script On Document Ready
+ */
+$( document ).ready( function() {
 
+} );
 
-	$( window ).load( function() {
-	    /**
-	     * Script On Load
-	     */
-	} );
+/**
+ * Script On Scroll
+ */
+$( document ).scroll( function() {
+    
+} );
 
-	$( window ).resize( function() {
-	    /**
-	     * Script On Resize
-	     */
-	} );
-} ( jQuery ) );
+/**
+ * Script On Load
+ */
+$( window ).load( function() {
+    
+} );
+
+/**
+ * Script On Resize
+ */
+$( window ).resize( function() {
+    
+} );
+
+/**
+ * Functions
+ */

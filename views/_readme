@@ -5,8 +5,8 @@ Place your whole content in this folder and use the function...
 $args = [
 	'key1' => 'val1'
 ];
-view( 'partial-[name-of-the-file]', $args )
-view( 'content-[name-of-the-file]', $args )
+view( '[name-of-the-file]', $args )
+view( '[name-of-the-file]', $args )
 
 Inside of partial-[name-of-the-file].php or content-[name-of-the-file].php you can use the key of an 
 array as a varibale.
