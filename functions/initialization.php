@@ -36,17 +36,17 @@ if ( ! function_exists( 'include_all_php' ) )
 }
 
 /**
- * Remove Rev Slider Metabox
+ * General checker
  */
-if ( is_admin() && ! function_exists( 'remove_revolution_slider_meta_boxes' ) ) 
-{
-	function remove_revolution_slider_meta_boxes() 
+if ( ! function_exists( 'checker' ) ) {
+	function checker( $var )
 	{
-		remove_meta_box( 'mymetabox_revslider_0', 'page', 'normal' );
-		remove_meta_box( 'mymetabox_revslider_0', 'post', 'normal' );
-		remove_meta_box( 'mymetabox_revslider_0', 'YOUR_CUSTOM_POST_TYPE', 'normal' );
+		if ( $var && $var != '' && ! empty( $var ) && ! is_null( $var ) ) {
+			return true;
+		} else {
+			return false;
+		}
 	}
-	// add_action( 'do_meta_boxes', 'remove_revolution_slider_meta_boxes' );
 }
 
 /**

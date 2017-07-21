@@ -1,26 +1,24 @@
 <?php get_header(); ?>
 				
-	<!-- CONTENT -->
-	<div class="col-lg-8">
-		<div class="content">
-			<?php if(have_posts()): ?>
-				<?php while(have_posts()): the_post(); ?>
-					<h2><?php the_title(); ?></h2>
-					<?php the_content(); ?>
-				<?php endwhile; ?>
-			<?php endif; ?>
+<div class="single-container">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<?php if (have_posts()): ?>
+					<?php while(have_posts()): the_post(); ?>
+						<div class="title-part">
+							<h2 class="opensans-bold"><?php the_title(); ?></h2>
+							<p class="date opensans-bold"><?php the_date(); ?> <span class="opensans-light">by</span> <?php the_author(); ?></p>
+						</div>
+						<div class="content-part">
+							<?php the_content(); ?>
+						</div>
+					<?php endwhile ?>
+				<?php endif ?>
+			</div>
+			<div class="clearfix"></div>
 		</div>
 	</div>
-	<!-- END CONTENT -->
-	
-	<h1>HEADER</h1>
+</div>
 
-	<!-- SIDEBAR -->
-	<div class="col-lg-4">
-		<div class="sidebar">
-			<?php get_sidebar(); ?>
-		</div>
-	</div>
-	<!-- END SIDEBAR -->
-
-<?php get_footer(); ?>
+<?php get_footer();

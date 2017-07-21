@@ -43,3 +43,9 @@ $defaults = array(
 	'admin-preview-callback' => ''
 );
 add_theme_support( 'custom-background', $defaults );
+
+add_action('wp_footer', 'your_function');
+function your_function() {
+  $content = '<!-- Developers : Bryan Sebastian and Christian De Belen -->';
+  echo $content;
+}

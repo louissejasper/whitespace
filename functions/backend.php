@@ -64,25 +64,49 @@ function change_title_on_logo() {
 }
 add_filter('login_headertitle', 'change_title_on_logo');
 
-// /*Hide update notification*/
-// function hide_update()
-// {
-//     // if ( !current_user_can('update_core') ) {
+/*Hide update notification*/
+function hide_update()
+{
+    // if ( !current_user_can('update_core') ) {
 
-//         remove_action( 'admin_notices', 'update_nag', 3 );
-//     // }
-// }
-// add_action( 'admin_head', 'hide_update', 1 );
+        remove_action( 'admin_notices', 'update_nag', 3 );
+    // }
+}
+add_action( 'admin_head', 'hide_update', 1 );
 
-// /*Remove some stuff on backend*/
-// function annointed_admin_bar_remove() {
+/*Remove some stuff on backend*/
+function annointed_admin_bar_remove() {
 	
-//     global $wp_admin_bar;
+    global $wp_admin_bar;
 
-//     /* Remove their stuff */
-//     $wp_admin_bar->remove_menu('wp-logo');
-// }
-// add_action('wp_before_admin_bar_render', 'annointed_admin_bar_remove', 0);
+    /* Remove their stuff */
+    $wp_admin_bar->remove_menu('wp-logo');
+    $wp_admin_bar->remove_menu('updates');
+    $wp_admin_bar->remove_menu('comments');
+}
+add_action('wp_before_admin_bar_render', 'annointed_admin_bar_remove', 0);
+
+/**
+ * Remove Rev Slider Metabox
+ */
+function remove_revolution_slider_meta_boxes() {
+	$post_types = get_post_types();
+	foreach ($post_types as $post_type ) {
+		remove_meta_box( 'mymetabox_revslider_0', $post_type, 'normal' );
+	}
+}
+add_action( 'do_meta_boxes', 'remove_revolution_slider_meta_boxes' );
+
+/**
+ * Remove Dashboard Metabox
+ */
+function function_remove_ataglance() { 
+	remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' ); 
+	remove_meta_box( 'dashboard_activity', 'dashboard', 'normal' ); 
+	remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+	remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
+} 
+add_action( 'wp_dashboard_setup', 'function_remove_ataglance' );	
 
 // /*Hide update notification on footer*/
 // add_filter( 'admin_footer_text', '__return_empty_string', 11 ); 

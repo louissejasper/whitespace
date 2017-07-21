@@ -1,26 +1,25 @@
 <?php get_header(); ?>
 				
-	<!-- CONTENT -->
-	<div class="col-lg-8">
-		<div class="content">
-			<?php if(have_posts()): ?>
-				<?php while(have_posts()): the_post(); ?>
-					<h2><?php the_title(); ?></h2>
-					<?php the_content(); ?>
-				<?php endwhile; ?>
-			<?php endif; ?>
+<div class="archive-container">
+	<div class="container">
+		<div class="row">
+			<?php if ( have_posts() ): ?>
+				<?php while( have_posts() ): the_post(); ?>
+					<div class="col-md-4 col-xs-6">
+						<div class="post-item">
+							<div class="details">
+								<h2><?php echo $post->post_title ?></h2>
+								<p class="excerpt"><?php echo $post->post_excerpt ?></p>
+							</div>
+							<p class="date"><?php the_time(get_option('date_format')); ?> by <?php the_author(); ?></p>
+							<a href="<?php echo get_permalink( $post->ID ); ?>" class="text-center fade-effect">READ MORE</a>
+						</div>
+					</div>
+				<?php endwhile ?>
+				<div class="clearfix"></div>
+			<?php endif ?>
 		</div>
 	</div>
-	<!-- END CONTENT -->
+</div>
 
-	<h1>TAXONOMY</h1>
-
-	<!-- SIDEBAR -->
-	<div class="col-lg-4">
-		<div class="sidebar">
-			<?php get_sidebar(); ?>
-		</div>
-	</div>
-	<!-- END SIDEBAR -->
-
-<?php get_footer(); ?>
+<?php get_footer();

@@ -1,3 +1,4 @@
+<?php
 /**
  * Add acf option page in every sidebar menu in wordpress backend.
  * Note: You must have ACF first with Opition
