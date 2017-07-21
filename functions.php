@@ -19,7 +19,6 @@ include_once( 'functions/wp-title.php' );
 include_all_php('posttype');
 include_all_php('taxonomy');
 include_all_php('options');
-include_all_php('ajax');
 include_all_php('hook');
 include_all_php('pregetpost');
 include_all_php('shortcode');

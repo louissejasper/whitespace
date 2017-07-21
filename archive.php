@@ -11,11 +11,6 @@
 								<h2><?php echo $post->post_title ?></h2>
 								<p class="excerpt"><?php echo $post->post_excerpt ?></p>
 							</div>
-							<?php
-								$author = get_userdata( $post->post_author );
-								$date = date( 'M d, Y', strtotime( $post->post_date ) );
-							?>
-							<p class="date"><?php the_time(get_option('date_format')); ?> by <?php the_author(); ?></p>
 							<a href="<?php echo get_permalink( $post->ID ); ?>" class="text-center fade-effect">READ MORE</a>
 						</div>
 					</div>
