@@ -1,27 +1,25 @@
-jQuery.noConflict();
-
-/**
- * Script On Document Ready
- */
-jQuery( document ).ready( function( $ ) {
+( function( $ ) {
+	/**
+	 * Script On Document Ready
+	 */
 	autoHeight( '.archive-container .details' );
-} );
 
-/**
- * Script On Resize
- */
-jQuery( window ).resize( function( $ ) {
-    autoHeight( '.archive-container .details' );
-} );
+	/**
+	 * Script On Resize
+	 */
+	$( window ).resize( function( $ ) {
+	    autoHeight( '.archive-container .details' );
+	} );
 
-/**
- * Functions
- */
-function autoHeight( resource ) {
-	$( resource ).height( 'auto' );
-	var maxHeight = Math.max.apply( null, $( resource ).map( function() {
-	    return $( this ).height();
-	} ).get() );
+	/**
+	 * Functions
+	 */
+	function autoHeight( resource ) {
+		$( resource ).height( 'auto' );
+		var maxHeight = Math.max.apply( null, $( resource ).map( function() {
+		    return $( this ).height();
+		} ).get() );
 
-	$( resource ).height( maxHeight );
-}
+		$( resource ).height( maxHeight );
+	}
+} ( jQuery ) ); 
