@@ -1,3 +1,26 @@
+/* Contact Form 7 Notification Style */
+	.wpcf7-response-output {
+		border: 0 !important;
+	    color: #fff;
+	    font-weight: 700;
+	    margin: 0;
+	    margin: 10px 0 !important;
+	    padding: 20px !important;
+	}
+	.wpcf7-mail-sent-ok {
+		background: #4caf50;
+	}
+	.wpcf7-mail-sent-ng {
+		background: #F44336;
+	}
+	.wpcf7-spam-blocked {
+		background: #FF9800;
+	}
+	.wpcf7-validation-errors {
+	    background: #e5d92e;
+	}
+/* Contact Form 7 Notification Style */
+
 /* Archive */
 	.archive-container {
 	    padding: 75px 0;
