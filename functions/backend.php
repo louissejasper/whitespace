@@ -1,11 +1,11 @@
 <?php
-/*Change the wp-admin logo*/
+/* Change the wp-admin logo */
 function change_my_wp_login_image() {
 	// Change [Maincolor] and [Subcolor] to customize you backend login page color
 	echo "
 	<style>
 		body.login #login h1 a {
-			background: url('".get_bloginfo('template_url')."/assets/images/logo.png') center no-repeat rgba(250,250,250,.10);
+			background: url('".get_bloginfo('template_url')."/assets/imgs/logo.png') center no-repeat rgba(250,250,250,.10);
 			height:65px;
 			width:100%; 
 			margin-bottom: 10px;
@@ -67,14 +67,11 @@ add_filter('login_headertitle', 'change_title_on_logo');
 /*Hide update notification*/
 function hide_update()
 {
-    // if ( !current_user_can('update_core') ) {
-
-        remove_action( 'admin_notices', 'update_nag', 3 );
-    // }
+    remove_action( 'admin_notices', 'update_nag', 3 );
 }
 add_action( 'admin_head', 'hide_update', 1 );
 
-/*Remove some stuff on backend*/
+/* Remove some stuff on backend */
 function annointed_admin_bar_remove() {
 	
     global $wp_admin_bar;

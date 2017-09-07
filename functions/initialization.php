@@ -36,7 +36,9 @@ if ( ! function_exists( 'include_all_php' ) )
 }
 
 /**
- * General checker
+ * Global checker
+ * @param  string/array $var the function will check this variable
+ * @return boolean      	 true if not empty, not null, is set, and not equal to ''.
  */
 if ( ! function_exists( 'checker' ) ) {
 	function checker( $var )

@@ -8,7 +8,7 @@ $args = [
 view( '[name-of-the-file]', $args )
 view( '[name-of-the-file]', $args )
 
-Inside of partial-[name-of-the-file].php or content-[name-of-the-file].php you can use the key of an 
+Inside of [name-of-the-file].php you can use the key of an 
 array as a varibale.
 
 echo $key1; // output val1
