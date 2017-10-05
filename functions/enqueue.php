@@ -20,15 +20,6 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
 		wp_enqueue_style('font_awesome', THEME_URL .'/vendor/font-awesome/css/font-awesome.min.css');
 		wp_enqueue_style('bootstrap_css', THEME_URL .'/vendor/bootstrap/css/bootstrap.min.css');
 		wp_enqueue_style('sweetalert2_css', THEME_URL .'/vendor/sweetalert2/sweetalert2.min.css');
-
-		/* Styles for the given part */
-		wp_enqueue_style('stylesheet',get_stylesheet_uri());
-		wp_enqueue_style('header', THEME_URL .'/assets/css/header.css');
-		wp_enqueue_style('footer', THEME_URL .'/assets/css/footer.css');
-		wp_enqueue_style('font', THEME_URL .'/assets/css/font.css');
-
-		/* Develoer's Custom Style */
-		wp_enqueue_style('custom', THEME_URL .'/assets/css/custom.css');
 		
 		/* 
 		 * Register/Hook Scripts
