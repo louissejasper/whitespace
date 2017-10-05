@@ -8,9 +8,8 @@
  * @return string The filtered title.
  */
 if ( ! function_exists( 'add_wp_title' ) ) {
-
-	function add_wp_title( $title, $sep ) {
-
+	function add_wp_title( $title, $sep )
+	{
 		global $paged, $page;
 
 		if ( is_feed() ) {

@@ -1,7 +1,7 @@
 <?php
 /**
  * Add acf option page in every sidebar menu in wordpress backend.
- * Note: You must have ACF first with Opition
+ * Note: You must have ACF first with Option
  **/
 
 /* Change [Name] to your Settings Name and this is show at backend sidebar */
@@ -10,7 +10,6 @@ acf_add_options_page( array(
 	'menu_title' 	=> '[Name] Settings',
 	'menu_slug' 	=> '[name]-settings',
 	'capability' 	=> 'manage_options',
-	'position' 		=> 59,
 ) );
 
 /* Change [Name] to your Settings Name and this is show under of backend sidebar menu */

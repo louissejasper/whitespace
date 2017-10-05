@@ -55,19 +55,23 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
             /**
              * Enqueue your style/script only @ IE
              */
-        } elseif( preg_match( '/firefox/i', $u_agent ) ) {
+        } 
+        elseif( preg_match( '/firefox/i', $u_agent ) ) {
             /**
              * Enqueue your style/script only @ Mozilla Firefox
              */
-        } elseif( preg_match( '/mac/i', $u_agent ) ) {
+        } 
+        elseif( preg_match( '/mac/i', $u_agent ) ) {
             /**
              * Enqueue your style/script only @ Safari
              */
-        } elseif( preg_match( '/chrome/i', $u_agent ) ) {
+        } 
+        elseif( preg_match( '/chrome/i', $u_agent ) ) {
             /**
              * Enqueue your style/script only @ Google Chrome
              */
-        } elseif( preg_match( '/Opera/i',$u_agent ) || preg_match( '/OPR/i',$u_agent ) ) {
+        } 
+        elseif( preg_match( '/Opera/i',$u_agent ) || preg_match( '/OPR/i',$u_agent ) ) {
             /**
              * Enqueue your style/script only @ Opera
              */
@@ -81,11 +85,6 @@ if ( ! function_exists( 'enqueue_admin_style_script' ) ) {
 
 	function enqueue_admin_style_script() 
 	{
-		/* 
-		 * Register/Hook Styles for backend
-		 */
-		wp_enqueue_style( 'backend', THEME_URL .'/assets/css/backend.css' );
-
 		/* 
 		 * Register/Hook Scripts for backend
 		 */

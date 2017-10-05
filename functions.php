@@ -17,11 +17,9 @@ include_once( 'functions/wp-title.php' );
 
 /* Include all the file inside the specify subfolder of functions folder */
 include_all_php('posttype');
-include_all_php('taxonomy');
-include_all_php('hook');
 include_all_php('pregetpost');
 include_all_php('shortcode');
-include_all_php('widget');
+include_all_php('taxonomy');
 
 /* AJAX Script */
 // include_once( 'ajax/function-name/function-name.php' );

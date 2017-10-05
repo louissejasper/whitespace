@@ -2,9 +2,9 @@
 /** 
  * Register template_name menu
  **/
-if ( ! function_exists( 'addMenus' ) ) {
+if ( ! function_exists( 'add_menus' ) ) {
 	
-	function addMenus() {
+	function add_menus() {
 		
 		// Menu locations set in backend
 		register_nav_menus( array(
@@ -13,7 +13,7 @@ if ( ! function_exists( 'addMenus' ) ) {
 		) );
 	}
 
-	add_action( 'after_setup_theme', 'addMenus' );
+	add_action( 'after_setup_theme', 'add_menus' );
 }
 
 /*

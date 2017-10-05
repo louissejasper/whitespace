@@ -28,8 +28,7 @@ if ( ! function_exists( 'include_all_php' ) )
 {
 	function include_all_php( $folder )
 	{
-		foreach ( glob( dirname(__FILE__)."/{$folder}/*.php" ) as $filename )
-		{
+		foreach ( glob( dirname(__FILE__)."/{$folder}/*.php" ) as $filename ) {
 			include_once( $filename );
 		}
 	}
@@ -45,7 +44,8 @@ if ( ! function_exists( 'checker' ) ) {
 	{
 		if ( $var && $var != '' && ! empty( $var ) && ! is_null( $var ) ) {
 			return true;
-		} else {
+		} 
+		else {
 			return false;
 		}
 	}
