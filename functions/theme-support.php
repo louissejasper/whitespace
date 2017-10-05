@@ -54,4 +54,4 @@ add_theme_support( 'custom-background', $defaults );
 // 	$content = '<!-- Developer of the theme : Bryan Sebastian https://bryan-sebastian.github.io/ -->';
 // 	echo $content;
 // }
-// add_action('wp_footer', 'your_function');
+// add_action( 'wp_footer', 'your_function' );
