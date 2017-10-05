@@ -2,7 +2,9 @@
 if ( ! function_exists( 'theme_support' ) ) {
 	function theme_support()
 	{
-		// Enable support for Post Thumbnails, and declare two sizes.
+		/**
+		 * Enable support for Post Thumbnails, and declare two sizes.
+		 */
 		add_theme_support( 'post-thumbnails' );
 
 		/*
@@ -10,10 +12,12 @@ if ( ! function_exists( 'theme_support' ) ) {
 		 * See http://codex.wordpress.org/Post_Formats
 		 */
 		add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
+			'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
 		) );
 
-		// This theme uses its own gallery styles.
+		/**
+		 * This theme uses its own gallery styles.
+		 */
 		add_filter( 'use_default_gallery_style', '__return_false' );
 	}
 	add_action( 'after_setup_theme', 'theme_support' );
@@ -42,9 +46,12 @@ $defaults = array(
 );
 add_theme_support( 'custom-background', $defaults );
 
-function your_function()
-{
-	$content = '<!-- Developer of the theme : Bryan Sebastian https://bryan-sebastian.github.io/ -->';
-	echo $content;
-}
-add_action('wp_footer', 'your_function');
+/**
+ * Uncomment this function if you want to place your name in footer ( in comment way )
+ */
+// function your_function()
+// {
+// 	$content = '<!-- Developer of the theme : Bryan Sebastian https://bryan-sebastian.github.io/ -->';
+// 	echo $content;
+// }
+// add_action('wp_footer', 'your_function');
