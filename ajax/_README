@@ -14,6 +14,7 @@ Use this code in js file to start ajax :
 	$.ajax( {
 	    url : ajaxurl,
 	    type : 'post',
+	    // dataType : 'json', // If the response is json
 	    data : {
 	        action : 'action_name',
 	        param_name : 'param_value'
@@ -40,7 +41,12 @@ function action_name()
 {
 	if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 		/* Statement */
+
+		// header('Content-Type: application/json'); // If the response is json
+
 		$param_name = $_POST['param_name'];
+
+		// echo json_encode( $var ); // If the response is json
  	}
  	die();
 }
