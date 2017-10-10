@@ -13,14 +13,9 @@ Text Domain:
 
 /*
 * Do not write a style in this file. 
-* Please insert your style on specific file.
+* Please insert your style ( .scss ) on assets/style/partials
+* then include it in general.scss
 *
-* Make this as your reference.
-* Path : assets/css
-*
-* backend.css ( Wordpress Backend Design )
-* tinymce.css ( Style for your tinymce plugin only. )
-* header.css ( Style for your header section )
-* footer.css ( Style for your footer section )
-* custom-*.css ( Developer's Custom Style )
+* What?! .scss? Yes! This theme support the sass to make your
+* production faster and your css beautiful.
 */
