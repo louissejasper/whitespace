@@ -26,6 +26,9 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
 		 */
 		
 		/* Third Party Script */
+		wp_register_script( 'popper_js', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js', array('jquery'), NULL, true );
+		wp_enqueue_script( 'popper_js' );
+		
 		wp_register_script( 'bootstrap_js', THEME_URL  .'/node_modules/bootstrap/dist/js/bootstrap.min.js', array('jquery'), NULL, true );
 		wp_enqueue_script( 'bootstrap_js' );
 
