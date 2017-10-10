@@ -17,19 +17,19 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
 		 */	
 		
 		/* Third Party Styles */
-		wp_enqueue_style('font_awesome', THEME_URL .'/vendor/font-awesome/css/font-awesome.min.css');
-		wp_enqueue_style('bootstrap_css', THEME_URL .'/vendor/bootstrap/css/bootstrap.min.css');
-		wp_enqueue_style('sweetalert2_css', THEME_URL .'/vendor/sweetalert2/sweetalert2.min.css');
+		wp_enqueue_style('font_awesome', THEME_URL .'/node_modules/font-awesome/css/font-awesome.min.css');
+		wp_enqueue_style('bootstrap_css', THEME_URL .'/node_modules/bootstrap/dist/css/bootstrap.min.css');
+		wp_enqueue_style('sweetalert2_css', THEME_URL .'/node_modules/sweetalert2/dist/sweetalert2.min.css');
 		
 		/* 
 		 * Register/Hook Scripts
 		 */
 		
 		/* Third Party Script */
-		wp_register_script( 'bootstrap_js', THEME_URL  .'/vendor/bootstrap/js/bootstrap.min.js', array('jquery'), NULL, true );
+		wp_register_script( 'bootstrap_js', THEME_URL  .'/node_modules/bootstrap/dist/js/bootstrap.min.js', array('jquery'), NULL, true );
 		wp_enqueue_script( 'bootstrap_js' );
 
-		wp_register_script( 'sweetalert2_js', THEME_URL  .'/vendor/sweetalert2/sweetalert2.min.js', array('jquery'), NULL, true );
+		wp_register_script( 'sweetalert2_js', THEME_URL  .'/node_modules/sweetalert2/dist/sweetalert2.min.js', array('jquery'), NULL, true );
 		wp_enqueue_script( 'sweetalert2_js' );
 
 		wp_register_script( 'sweetalert2_support_js', '//cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js', array('jquery'), NULL, true );
