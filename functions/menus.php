@@ -2,9 +2,10 @@
 /** 
  * Register template_name menu
  **/
-if ( ! function_exists( 'add_menus' ) ) {
-	
-	function add_menus() {
+if ( ! function_exists( 'add_menus' ) )
+{
+	function add_menus()
+	{
 		
 		// Menu locations set in backend
 		register_nav_menus( array(

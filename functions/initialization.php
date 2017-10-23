@@ -1,10 +1,5 @@
 <?php
 /**
- * Collection of your random function
- **/
-
-
-/**
  * Global JS variable
  */
 if ( ! function_exists( 'global_js_var' ) ) 
@@ -22,13 +17,16 @@ if ( ! function_exists( 'global_js_var' ) )
 }
 
 /**
- * Include all php inside the folder
+ * Include all the php files inside the given folder
+ * @param  [string] $folder_name [name of the folder that you want to include all the files inside of it]
+ * @return [void]				 [include all the php files inside the given folder]
  */
 if ( ! function_exists( 'include_all_php' ) ) 
 {
-	function include_all_php( $folder )
+	function include_all_php( $folder_name )
 	{
-		foreach ( glob( dirname(__FILE__)."/{$folder}/*.php" ) as $filename ) {
+		foreach ( glob( dirname(__FILE__)."/{$folder_name}/*.php" ) as $filename ) 
+		{
 			include_once( $filename );
 		}
 	}
@@ -36,18 +34,14 @@ if ( ! function_exists( 'include_all_php' ) )
 
 /**
  * Global checker
- * @param  string/array $var the function will check this variable
- * @return boolean      	 true if not empty, not null, is set, and not equal to ''.
+ * @param  [string/array] $var  [the function will check this variable]
+ * @return [boolean]      	 	[true if not empty, not null, is set, and not equal to '']
  */
-if ( ! function_exists( 'checker' ) ) {
+if ( ! function_exists( 'checker' ) ) 
+{
 	function checker( $var )
 	{
-		if ( $var && $var != '' && ! empty( $var ) && ! is_null( $var ) ) {
-			return true;
-		} 
-		else {
-			return false;
-		}
+		return ( $var && $var != '' && ! empty( $var ) && ! is_null( $var ) );
 	}
 }
 

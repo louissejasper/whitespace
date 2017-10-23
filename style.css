@@ -1,21 +1,33 @@
 /*
-Theme Name:
-Theme URI:
-Author:
-Author URI:
-Description:
-Version:
-License:
-License URI:
-Tags:
-Text Domain:
-*/
+Theme Name: whitespace
+Theme URI: https://github.com/bryan-sebastian/whitespace
+Author: Bryan R. Sebastian
+Author URI: https://bryan-sebastian.github.io/
+Description: This theme "whitespace" is a starter theme to develop a wordpress website
+Version: 1.0.0
+License: MIT License
+License URI: https://github.com/bryan-sebastian/whitespace/blob/master/LICENSE.md
+Tags: Starter Theme, Developer Theme, Wordpress Theme
+Text Domain: whitespace
 
-/*
-* Do not write a style in this file. 
-* Please insert your style ( .scss ) on assets/style/partials
-* then include it in general.scss
-*
-* What?! .scss? Yes! This theme support the sass to make your
-* production faster and your css beautiful.
+Important notes : 
+You can edit the details above depends on your website details.
+Remove the license MIT if your project is not opensource.
+
+Notes :
+Do not write a style in this file. 
+Please insert your style ( .scss ) on assets/style/partials
+then include it in general.scss
+
+What?! .scss? Yes! This theme support the sass to make your
+production faster and your css coding become beautiful.
+
+If you enjoy and think that this theme is so useful
+please star the repository of this theme at https://github.com/bryan-sebastian/whitespace
+and follow me at https://github.com/bryan-sebastian
+
+Thank You very much! Enjoy!
+
+Relax, enjoy your life, and do whatever you want to do.
+- Bryan Sebastian founder of whitespace
 */

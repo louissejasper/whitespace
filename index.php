@@ -4,7 +4,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						body(index.php)
+						BODY(index.php) - remove this in production
 					</div>
 				</div>
 			</div>

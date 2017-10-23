@@ -8,7 +8,8 @@
  * [0-9]+ = number
  * [^/]+ = letter
  */
-function new_site_rewrite_rules( $rules ) {
+function new_site_rewrite_rules( $rules ) 
+{
     $newrules = array();
     $newrules['(first_word)/([0-9]+)?$'] = 'index.php/$matches[1]/?[check the wp_query if there is default variable the add to this area]&your_variable=$matches[2]';
 
@@ -28,7 +29,8 @@ add_filter( 'rewrite_rules_array','new_site_rewrite_rules' );
  * @param  array $vars list of variables in rules
  * @return aray  $vars updated list of variables in rules
  */
-function new_site_insert_query_vars( $vars ) {
+function new_site_insert_query_vars( $vars )
+{
     array_push($vars, 'your_variable');
 
     return $vars;

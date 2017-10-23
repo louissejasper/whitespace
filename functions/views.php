@@ -18,9 +18,9 @@
  *
  * Put as many variables you want to passed in the view in the array
  * 
- * @param  string $template - Name of the file without file extension
- * @param  array  $vars     - The variables to be passed into the view
- * @return void
+ * @param  [string] $template [Name of the file without file extension]
+ * @param  [array]  $vars     [The variables to be passed into the view]
+ * @return [void]			  [Include partial file and enable the passing of variables]
  */
 if ( ! function_exists( 'include_partial' ) ) 
 {

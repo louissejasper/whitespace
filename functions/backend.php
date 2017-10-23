@@ -1,6 +1,7 @@
 <?php
 /* Change the wp-admin logo */
-function change_my_wp_login_image() {
+function change_my_wp_login_image()
+{
 	// Change [Maincolor] and [Subcolor] to customize you backend login page color
 	echo "
 	<style>
@@ -53,13 +54,15 @@ function change_my_wp_login_image() {
 add_action("login_head", "change_my_wp_login_image");
 
 /*Change the wp-admin logo link*/
-function loginpage_custom_link() {
+function loginpage_custom_link() 
+{
 	return site_url();
 }
 add_filter('login_headerurl','loginpage_custom_link');
 
 /*Change the wp-admin logo title*/
-function change_title_on_logo() {
+function change_title_on_logo() 
+{
 	return site_url();
 }
 add_filter('login_headertitle', 'change_title_on_logo');
@@ -72,8 +75,8 @@ function hide_update()
 add_action( 'admin_head', 'hide_update', 1 );
 
 /* Remove some stuff on backend */
-function annointed_admin_bar_remove() {
-	
+function annointed_admin_bar_remove() 
+{
     global $wp_admin_bar;
 
     /* Remove their stuff */
@@ -86,7 +89,8 @@ add_action('wp_before_admin_bar_render', 'annointed_admin_bar_remove', 0);
 /**
  * Remove Rev Slider Metabox
  */
-function remove_revolution_slider_meta_boxes() {
+function remove_revolution_slider_meta_boxes() 
+{
 	$post_types = get_post_types();
 	foreach ($post_types as $post_type ) {
 		remove_meta_box( 'mymetabox_revslider_0', $post_type, 'normal' );
@@ -97,7 +101,8 @@ add_action( 'do_meta_boxes', 'remove_revolution_slider_meta_boxes' );
 /**
  * Remove Dashboard Metabox
  */
-function function_remove_ataglance() { 
+function function_remove_ataglance()
+{ 
 	remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' ); 
 	remove_meta_box( 'dashboard_activity', 'dashboard', 'normal' ); 
 	remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
@@ -111,8 +116,10 @@ add_action( 'wp_dashboard_setup', 'function_remove_ataglance' );
 
 
 // Admin Menu
-function remove_admin_menus() {
+function remove_admin_menus()
+{
 	global $submenu;
+	
 	unset($submenu['themes.php'][6]); 
 	//remove_menu_page( 'edit.php' );  // Posts
 	remove_menu_page( 'link-manager.php' ); // Links

@@ -15,7 +15,8 @@ function include_assets( $filenames = array(), $jquery = '', $in_footer = false 
 	if ( empty( $filenames ) )
 		return;
 
-	foreach ( $filenames as $filename ) {
+	foreach ( $filenames as $filename ) 
+	{
 		/* Get the extension */
 		$ext = pathinfo( $filename, PATHINFO_EXTENSION );
 		/* Remove the extension */
@@ -27,15 +28,18 @@ function include_assets( $filenames = array(), $jquery = '', $in_footer = false 
 			return;
 
 		$uri = get_template_directory_uri(). '/assets/'. $ext .'/'. $filename;
-		if ( $ext == 'js' ) {
+		if ( $ext == 'js' ) 
+		{
 			wp_register_script( $without_ext, $uri, array( $jquery ), NULL, $in_footer );
 		    wp_enqueue_script( $without_ext );
 		} 
-		else if( $ext == 'css' ) {
+		else if( $ext == 'css' ) 
+		{
 			wp_register_style( $without_ext, $uri );
 			wp_enqueue_style( $without_ext );
 		} 
-		else {
+		else 
+		{
 			return;
 		}
 	}

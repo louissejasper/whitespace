@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-				
+
+<h2>PAGE(page.php) - remove this in production</h2>
+
 <div class="single-container">
 	<div class="container">
 		<div class="row">

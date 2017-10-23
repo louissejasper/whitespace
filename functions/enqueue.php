@@ -1,10 +1,9 @@
 <?php
 /**
- * Include default scripts and css
- * Include in wp_header()
+ * Include default scripts and css in frontend
  **/
-if ( ! function_exists( 'enqueue_style_script' ) ) {
-
+if ( ! function_exists( 'enqueue_style_script' ) )
+{
 	function enqueue_style_script() 
 	{
 		/* 
@@ -26,6 +25,9 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
 		 */
 		
 		/* Third Party Script */
+		wp_register_script( 'nicescroll', THEME_URL  .'/node_modules/nicescroll/jquery.nicescroll.min.js', array('jquery'), NULL, true );
+		wp_enqueue_script( 'nicescroll' );
+		
 		wp_register_script( 'popper_js', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js', array('jquery'), NULL, true );
 		wp_enqueue_script( 'popper_js' );
 		
@@ -54,27 +56,32 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
 		 * Browser Compatibility
 		 */
 		$u_agent = $_SERVER['HTTP_USER_AGENT'];
-        if( preg_match( '/trident/i', $u_agent ) ) {
+        if( preg_match( '/trident/i', $u_agent ) ) 
+        {
             /**
              * Enqueue your style/script only @ IE
              */
         } 
-        elseif( preg_match( '/firefox/i', $u_agent ) ) {
+        elseif( preg_match( '/firefox/i', $u_agent ) ) 
+        {
             /**
              * Enqueue your style/script only @ Mozilla Firefox
              */
         } 
-        elseif( preg_match( '/mac/i', $u_agent ) ) {
+        elseif( preg_match( '/mac/i', $u_agent ) ) 
+        {
             /**
              * Enqueue your style/script only @ Safari
              */
         } 
-        elseif( preg_match( '/chrome/i', $u_agent ) ) {
+        elseif( preg_match( '/chrome/i', $u_agent ) ) 
+        {
             /**
              * Enqueue your style/script only @ Google Chrome
              */
         } 
-        elseif( preg_match( '/Opera/i',$u_agent ) || preg_match( '/OPR/i',$u_agent ) ) {
+        elseif( preg_match( '/Opera/i',$u_agent ) || preg_match( '/OPR/i',$u_agent ) ) 
+        {
             /**
              * Enqueue your style/script only @ Opera
              */
@@ -84,8 +91,11 @@ if ( ! function_exists( 'enqueue_style_script' ) ) {
 	add_action('wp_enqueue_scripts','enqueue_style_script');
 }
 
-if ( ! function_exists( 'enqueue_admin_style_script' ) ) {
-
+/**
+ * Include default scripts and css in backend
+ **/
+if ( ! function_exists( 'enqueue_admin_style_script' ) ) 
+{
 	function enqueue_admin_style_script() 
 	{
 		/* 
@@ -94,6 +104,5 @@ if ( ! function_exists( 'enqueue_admin_style_script' ) ) {
 		wp_register_script( 'backend', THEME_URL .'/assets/js/backend.js', array('jquery'), NULL, true );
 		wp_enqueue_script( 'backend' );
 	}
-
 	add_action( 'admin_enqueue_scripts', 'enqueue_admin_style_script' );
 }

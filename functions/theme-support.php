@@ -1,5 +1,6 @@
 <?php
-if ( ! function_exists( 'theme_support' ) ) {
+if ( ! function_exists( 'theme_support' ) )
+{
 	function theme_support()
 	{
 		/**

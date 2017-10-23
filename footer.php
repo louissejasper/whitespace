@@ -2,7 +2,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<h1>FOOTER</h1>
+						<h2>FOOTER(footer.php) - remove this in production</h2>
 					</div>	
 				</div>
 			</div>
